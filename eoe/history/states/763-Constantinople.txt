@@ -4,6 +4,17 @@ state={
 	provinces={
 		9833 
 	}
-	manpower=0
+	manpower = 1000000
 	buildings_max_level_factor=1.000
+	history ={
+		owner = TUR		
+		buildings = {
+			infrastructure = 6
+		}
+
+		add_core_of = TUR
+	}
 }
+
+
+
