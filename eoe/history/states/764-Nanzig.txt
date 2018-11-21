@@ -1,6 +1,7 @@
 state={
 	id=764
 	name="Nanzig" 
+	state_category = city
 	provinces={
 		11516 
 		521

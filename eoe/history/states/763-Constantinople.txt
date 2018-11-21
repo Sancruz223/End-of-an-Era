@@ -1,6 +1,7 @@
 state={
 	id=763
 	name="STATE_763"
+	state_category = large_city	
 	provinces={
 		9833 
 	}
@@ -10,6 +11,8 @@ state={
 		owner = TUR		
 		buildings = {
 			infrastructure = 6
+			9833 = {
+				naval_base = 8		
 		}
 
 		add_core_of = TUR
