@@ -1,6 +1,6 @@
 capital = 4879
 
-oob = 
+oob = "DMA_1936"
 
 set_research_slots = 2
 
