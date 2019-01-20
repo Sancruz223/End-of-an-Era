@@ -215,28 +215,32 @@ create_import = {
 set_politics = {
 
 	parties = {
+	
+	neutrality = {
+		popularity = 80
+	}
 		democratic = { 
-			popularity = 20
+			popularity = 15
 		}
 
 		fascism = {
-			popularity = 60
+			popularity = 5
 		}
 		
 		communism = {
-			popularity = 20
-			banned = yes #default is no
+			popularity = 0
+			banned = yes 
 		}
 	}
 	
-	ruling_party = fascism
+	ruling_party = neutrality
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
 
 }
 
-create_faction = Axis
+create_faction = Central Powers
 add_to_faction = GER
 
 
@@ -250,6 +254,17 @@ add_ideas = {
 add_ideas = GER_mefo_bills_1
 
 activate_mission = GER_mefo_bills_mission
+
+create_country_leader = {
+	name = "Wilhelm III"
+	picture = "Portrait_Germany_Wilhelm_III"
+	expire = "1965.1.1"
+	ideology = moderatism 
+	traits = {
+		Kaiser
+	}
+}
+
 
 create_country_leader = {
 	name = "Adolf Hitler"
@@ -307,12 +322,10 @@ create_country_leader = {
 #		stalins_puppet
 #		political_prisoner
 #	}
-#}
+#
 
-add_namespace = {
-	name = "ger_unit_leader"
-	type = unit_leader
-}
+
+
 
 create_field_marshal = {
 	name = "Gerd von Rundstedt"
