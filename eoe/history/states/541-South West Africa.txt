@@ -10,7 +10,10 @@ state={
 		owner = DMA
 		buildings = {
 			infrastructure = 3
-		}
+			2207 = {
+					naval_base = 3
+				}
+			}
 		victory_points = {
 			4879 1
 		}
