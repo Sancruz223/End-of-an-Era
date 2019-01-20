@@ -4,12 +4,13 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = GER_FOCUS
+			tag = Ger
 		}
 	}
 	default = no
 	focus = {
 		id = GER_GOVERMENT
+		text = Germany Goverment
 		icon = GFX_goal_generic_demand_territory
 		cost = 2,80
 		x = 14
@@ -17,7 +18,8 @@ focus_tree = {
 
 	}
 	focus = {
-		id = GER_WILHELM III
+		id = GER_WILHELM_III
+		text = Wilhelm the third
 		icon = GFX_focus_ger_return_of_the_kaiser
 		cost = 10,00
 		prerequisite = {
@@ -29,21 +31,23 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_MILI
+		text = Germany Military
 		icon = GFX_focus_generic_military_mission
 		cost = 10,00
 		prerequisite = {
-			focus = GER_WILHELM III
+			focus = GER_WILHELM_III
 		}
 		x = 7
 		y = 5
 
 	}
 	focus = {
-		id = GER_REBUILD THE NATION
+		id = GER_REBUILD_NATION
+		text = Germany Rebuild Nation
 		icon = GFX_goal_generic_construction2
 		cost = 10,00
 		prerequisite = {
-			focus = GER_WILHELM III
+			focus = GER_WILHELM_III
 		}
 		x = 14
 		y = 5
@@ -51,10 +55,11 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_NEW_INDUSTRIE
+		text = Germany new Industry
 		icon = GFX_goal_generic_construction
 		cost = 10,00
 		prerequisite = {
-			focus = GER_REBUILD THE NATION
+			focus = GER_REBUILD_NATION
 		}
 		x = 14
 		y = 7
@@ -62,6 +67,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_ROAD
+		text = Germany Roads
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10,00
 		prerequisite = {
@@ -73,6 +79,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_OIL
+		text = German Oil
 		icon = GFX_goal_generic_oil_refinery
 		cost = 10,00
 		prerequisite = {
@@ -84,6 +91,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_STEEL_PRODUCTION
+		text = Steel Production
 		icon = GFX_focus_generic_steel
 		cost = 10,00
 		prerequisite = {
@@ -95,10 +103,11 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_GERMAN-AFRIKA
+		text = Germany Afrika
 		icon = GFX_focus_SAF_german_coup
 		cost = 10,00
 		prerequisite = {
-			focus = GER_WILHELM III
+			focus = GER_WILHELM_III
 		}
 		x = 21
 		y = 5
@@ -106,6 +115,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_HUBERTUS
+		text = Afrikan Goverment
 		icon = GFX_focus_generic_support_the_left_right
 		cost = 10,00
 		prerequisite = {
@@ -117,6 +127,7 @@ focus_tree = {
 	}
 	focus = {
 		id = GER_PROMOTE_INDUSTRY
+		text = Promote Industry
 		icon = GFX_goal_generic_production
 		cost = 10,00
 		prerequisite = {
