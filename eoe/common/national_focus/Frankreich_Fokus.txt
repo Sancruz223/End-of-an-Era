@@ -1,0 +1,44 @@
+focus_tree = {
+	id = Frankreich_Fokus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = Fra
+		}
+	}
+	default = no
+	focus = {
+		id = FRA_VIVE_LA_REVOLUTION
+		text = Vive_La_Revolution
+		icon = GFX_focus_generic_strike_at_democracy2
+		cost = 10,00
+		x = 7
+		y = 1
+
+	}
+	focus = {
+		id = FRA_Government_Strengths
+		text = Government_strengths
+		icon = GFX_focus_generic_strike_at_democracy3
+		cost = 10,00
+		x = 11
+		y = 1
+
+	}
+	focus = {
+		id = FRA_UNE_NATION_FORTE
+		text = Une_Nation_Forte
+		icon = GFX_focus_ger_reichskommisariats
+		cost = 10,00
+		prerequisite = {
+			focus = FRA_VIVE_LA_REVOLUTION
+		}
+		prerequisite = {
+			focus = FRA_Government_Strengths
+		}
+		x = 9
+		y = 3
+
+	}
+}

@@ -1,0 +1,33 @@
+###########################
+# German Events
+###########################
+
+add_namespace = germany
+
+country_event = {
+	id = wtt_germany.5
+	title = wtt_germany.5.t
+	desc = wtt_germany.5.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = germany.73.a
+		trigger = { is_ai = no }
+		set_country_flag = german_rebels
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Wilhelm III"
+			desc = "POLITICS_WILHELM_III_DESC"
+			picture = GFX_portrait_ger_wilhelm_iii
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				popular_figurehead2
+			}
+		}
+		custom_effect_tooltip = wtt_germany.5_tt
+			}
+		}
+	}

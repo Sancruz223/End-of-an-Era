@@ -245,25 +245,32 @@ add_to_faction = GER
 
 
 add_ideas = {
-	sour_loser
-	general_staff
-	limited_exports
-	limited_conscription
-	partial_economic_mobilisation
 }
-add_ideas = GER_mefo_bills_1
 
 activate_mission = GER_mefo_bills_mission
 
 create_country_leader = {
-	name = "Wilhelm III"
-	picture = "Portrait_Germany_Wilhelm_III"
+	name = "Reichstag"
+	picture = "Reichstag.dds"
 	expire = "1965.1.1"
-	ideology = moderatism 
+	ideology = despotism
 	traits = {
-		Kaiser
+		popular_figurehead2
 	}
 }
+
+create_country_leader = {
+	name = "Wilhelm III"
+	picture = "GFX_portrait_ger_wilhelm_iii"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		popular_figurehead2
+	}
+}
+		{
+	custom_effect_tooltip = wtt_germany.5_tt
+	}
 
 
 create_country_leader = {
