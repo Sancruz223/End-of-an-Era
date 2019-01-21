@@ -8,14 +8,13 @@ focus_tree = {
 		}
 	}
 		default = no
-	focus = {
+focus = {
 		id = GER_GOVERMENT
 		text = Germany_Goverment
 		icon = GFX_focus_ger_revive_kaiserreich
-			cost = 5
 		x = 14
 		y = 1
-		cost = 10
+		cost = 5
 		
 		ai_will_do = {
 			factor = 10
@@ -28,39 +27,45 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = GER_return_of_the_kaiser
-		text = Kaiser_Wilhelm_III
+		id = GER_Kaiser_Wilhelm_III
 		icon = GFX_focus_ger_return_of_the_kaiser
-		cost = 10,00
+
+		x = 14
+		y = 3
+		cost = 8
+
 		prerequisite = {
 			focus = GER_GOVERMENT
 		}
-		x = 14
-		y = 3
 
-	}
-	focus = {
-		id = GER_MILITARY
-		text = The_Wehrmacht
-		icon = GFX_focus_generic_military_mission
-		cost = 10,00
-		prerequisite = {
-			focus = GER_return_of_the_kaiser
+		completion_reward = {
+			add_political_power = 80
+			country_event= {days = 0 id = Kaiser.1}
+			create_country_leader = {
+				name = "Kaiser Wilhelm III"
+				desc = "POLITICS_Wilhelm_III_DESC"
+				picture = "Kaiser_Wilhelm_III.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
 		}
-		x = 7
-		y = 5
-
 	}
+
+
 	focus = {
 		id = GER_REBUILD_NATION
 		text = Rebuilding_Nation
 		icon = GFX_goal_generic_construction2
 		cost = 10,00
 		prerequisite = {
-			focus = GER_return_of_the_kaiser
+			focus = GER_Kaiser_Wilhelm_III
 		}
-		x = 14
-		y = 5
+		x = 7
+		y = -1
+		relative_position_id = GER_MILITARY
 
 	}
 	focus = {
@@ -72,7 +77,47 @@ focus_tree = {
 			focus = GER_REBUILD_NATION
 		}
 		x = 14
-		y = 7
+		y = 6
+
+	}
+	focus = {
+		id = GER_MILITARY
+		text = The_Wehrmacht
+		icon = GFX_focus_generic_military_mission
+		cost = 10,00
+		prerequisite = {
+			focus = GER_REBUILD_NATION
+		}
+		x = 7
+		y = 6
+
+	}
+	focus = {
+		id = Military_Economy
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10,00
+		prerequisite = {
+			focus = GER_NEW_INDUSTRIE
+		}
+		mutually_exclusive = {
+			focus = Civil_Economy
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = Civil_Economy
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10,00
+		prerequisite = {
+			focus = GER_NEW_INDUSTRIE
+		}
+		mutually_exclusive = {
+			focus = Military_Economy
+		}
+		x = 16
+		y = 8
 
 	}
 	focus = {
@@ -81,22 +126,11 @@ focus_tree = {
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10,00
 		prerequisite = {
-			focus = GER_NEW_INDUSTRIE
+			focus = Military_Economy
+			focus = Civil_Economy
 		}
 		x = 14
 		y = 9
-
-	}
-	focus = {
-		id = GER_OIL
-		text = Oil_in_Germany
-		icon = GFX_goal_generic_oil_refinery
-		cost = 10,00
-		prerequisite = {
-			focus = GER_ROAD
-		}
-		x = 12
-		y = 10
 
 	}
 	focus = {
@@ -112,13 +146,25 @@ focus_tree = {
 
 	}
 	focus = {
+		id = GER_OIL
+		text = Oil_in_Germany
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10,00
+		prerequisite = {
+			focus = GER_ROAD
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
 		id = GER_PROMOTE_INDUSTRY
 		text = Promote_Industry
 		icon = GFX_goal_generic_production
 		cost = 10,00
 		prerequisite = {
-			focus = GER_OIL
 			focus = GER_STEEL_PRODUCTION
+			focus = GER_OIL
 		}
 		x = 14
 		y = 11
@@ -130,10 +176,10 @@ focus_tree = {
 		icon = GFX_focus_SAF_german_coup
 		cost = 10,00
 		prerequisite = {
-			focus = GER_return_of_the_kaiser
+			focus = GER_REBUILD_NATION
 		}
 		x = 21
-		y = 5
+		y = 6
 
 	}
 	focus = {
@@ -145,7 +191,7 @@ focus_tree = {
 			focus = Ger_Afrika
 		}
 		x = 21
-		y = 7
+		y = 8
 
 	}
 }
