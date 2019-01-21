@@ -2,32 +2,32 @@
 # German Events
 ###########################
 
-add_namespace = germany
+add_namespace = Kaiser
 
 country_event = {
-	id = wtt_germany.5
-	title = wtt_germany.5.t
-	desc = wtt_germany.5.d
+	id = Kaiser.1
+	title = Kaiser.1.t
+	desc = Kaiser.1.d
 	picture = GFX_report_event_german_troops
 	
-	is_triggered_only = yes
+	is_triggered_only = no
 	
-	option = { 
-		name = germany.73.a
-		trigger = { is_ai = no }
-		set_country_flag = german_rebels
-		kill_country_leader = yes
-		create_country_leader = {
-			name = "Wilhelm III"
-			desc = "POLITICS_WILHELM_III_DESC"
-			picture = GFX_portrait_ger_wilhelm_iii
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				popular_figurehead2
-			}
-		}
-		custom_effect_tooltip = wtt_germany.5_tt
-			}
+	trigger = {
+		tag = Ger
+		AND = { 
+			date > 1936.2.1
 		}
 	}
+	
+	mean_time_to_happen = {days = 5}
+	
+		
+	option = { 
+		name = Okay
+		ai_chacne = { factor = 100 }
+		declare_war_on = {
+		target = Fra
+		type annex_everything
+		}		
+	}
+}
