@@ -10,26 +10,9 @@ country_event = {
 	desc = Kaiser.1.d
 	picture = GFX_report_event_german_troops
 	
-	is_triggered_only = no
-	
-	trigger = {
-		tag = GER
-	}
+	is_triggered_only = yes
 
 	option = { 
-		name = Kaiser.1.a
-		ai_chacne = { factor = 100 }
-		create_country_leader = {
-			name = "Kaiser Wilhelm III"
-			desc = "POLITICS_KING_ZOG_DESC"
-			picture = "Kaiser_Wilhelm_III.dds"
-			expire = "1965.1.1"
-			ideology = despotism
-			traits = {
-				#
-			}
-		}
-		
+		name = Okay	
 	}		
-
 }

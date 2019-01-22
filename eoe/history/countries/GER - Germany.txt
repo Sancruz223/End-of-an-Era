@@ -211,6 +211,10 @@ create_import = {
 
 	}
 }
+add_ideas = {
+		GER_victors_of_wwi
+	}
+
 
 set_politics = {
 

@@ -1,0 +1,58 @@
+ideas = {
+
+	country = {
+
+		GER_victors_of_wwi = {
+			
+			allowed = {
+				original_tag = GER
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+			
+			research_bonus = {
+				land_doctrine = -0.75
+				navy_doctrine = -0.75
+				air_doctrine = -0.75
+				
+			}
+			modifier = {
+				conscription = -0.001
+				war_support_factor = -0.20
+			}
+		}
+
+		GER_Repair_Nation = {
+			allowed = {
+				always = no
+			}
+			
+			allowed_civil_war = {
+				 has_government = neutrality
+			}
+
+			removal_cost = -1
+
+			picture = ger_rebuild_the_nation
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+				production_speed_naval_base_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.05
+				production_speed_bunker_factor = 0.05
+				production_speed_air_base_factor = 0.05
+				production_speed_anti_air_building_factor = 0.05
+				production_speed_radar_station_factor = 0.05
+				production_speed_synthetic_refinery_factor = 0.05
+		}
+	}
+}

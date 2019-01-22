@@ -32,7 +32,11 @@ focus = {
 
 		x = 14
 		y = 3
-		cost = 8
+		cost = 10
+		
+		ai_will_do = {
+			factor = 10
+		}
 
 		prerequisite = {
 			focus = GER_GOVERMENT
@@ -60,12 +64,21 @@ focus = {
 		text = Rebuilding_Nation
 		icon = GFX_goal_generic_construction2
 		cost = 10,00
+				ai_will_do = {
+				factor = 10
+		}
 		prerequisite = {
 			focus = GER_Kaiser_Wilhelm_III
 		}
 		x = 7
 		y = -1
+		
+				completion_reward = {
+			add_timed_idea = { idea = GER_Repair_Nation days = 730 }
+		}
+		
 		relative_position_id = GER_MILITARY
+		
 
 	}
 	focus = {
