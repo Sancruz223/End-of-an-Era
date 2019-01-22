@@ -65,9 +65,9 @@ set_politics = {
 set_convoys = 40
 
 create_country_leader = {
-	name = "Hermann Göring"
+	name = "Rupprecht"
 	desc = "POLITICS_KING_ZOG_DESC"
-	picture = "Hermann_Döring.dds"
+	picture = "deustchmittelafrika.dds"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
