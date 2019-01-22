@@ -1,0 +1,20 @@
+state={
+	id=769
+	name="STATE_769"
+	state_category = pastoral
+	provinces={
+		2080 5036 5054 6039 9137
+	}
+		history = {
+			owner = DMA	
+			buildings = {
+				infrastructure = 3
+
+			}
+			add_core_of = DMA
+		}
+
+
+	manpower=459000
+	buildings_max_level_factor=1.000
+}
