@@ -1,0 +1,20 @@
+state={
+	id=770
+	name="STATE_770"
+	state_category = pastoral
+	provinces={
+		1389 2129 4418 4393 5135 7365 7614 10251 10423 10954 11004 11018 12154 12193 12237 12240 12400 12428 12931
+	}
+		history = {
+			owner = GER	
+			buildings = {
+				infrastructure = 3
+
+			}
+			add_core_of = 
+		}
+
+
+	manpower=459000
+	buildings_max_level_factor=1.000
+}
