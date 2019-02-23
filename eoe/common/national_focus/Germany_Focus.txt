@@ -101,6 +101,9 @@ focus = {
 		prerequisite = {
 			focus = GER_REBUILD_NATION
 		}
+		
+				completion_reward = {
+			army_experience = 25
 		x = 7
 		y = 6
 
