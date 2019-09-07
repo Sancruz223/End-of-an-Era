@@ -6,4 +6,4 @@ tags={
 	"Gameplay"
 	"National Focuses"
 }
-supported_version="1.5.4"
+supported_version="1.7.1"
