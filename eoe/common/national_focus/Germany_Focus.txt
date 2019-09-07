@@ -8,40 +8,38 @@ focus_tree = {
 		}
 	}
 		default = no
-focus = {
-		id = GER_GOVERMENT
-		text = Germany_Goverment
+	focus = {
+		id = germany_goverment
 		icon = GFX_focus_ger_revive_kaiserreich
-		x = 14
-		y = 1
+		cost = 10,00
+		x = 11
+		y = 0
 		cost = 5
 		
 		ai_will_do = {
 			factor = 10
 		}
-		available_if_capitulated = yes
 		
-		completion_reward = {
+				completion_reward = {
 			add_political_power = 120
 			#pp	+120
 		}
+
 	}
 	focus = {
-		id = GER_Kaiser_Wilhelm_III
+		id = kaiser_wilhelm_III
 		icon = GFX_focus_ger_return_of_the_kaiser
-
-		x = 14
-		y = 3
-		cost = 10
+		cost = 10,00
+		prerequisite = {
+			focus = germany_goverment
+		}
+		x = 11
+		y = 2
 		
 		ai_will_do = {
 			factor = 10
 		}
-
-		prerequisite = {
-			focus = GER_GOVERMENT
-		}
-
+		
 		completion_reward = {
 			add_political_power = 80
 			country_event= {days = 0 id = Kaiser.1}
@@ -56,158 +54,24 @@ focus = {
 				}
 			}
 		}
+
 	}
-
-
 	focus = {
-		id = GER_REBUILD_NATION
-		text = Rebuilding_Nation
+		id = rebulid_nation
 		icon = GFX_goal_generic_construction2
 		cost = 10,00
+		prerequisite = {
+			focus = kaiser_wilhelm_III
+		}
+		x = 11
+		y = 4
+		cost = 10,00
+		
 				ai_will_do = {
 				factor = 10
 		}
-		prerequisite = {
-			focus = GER_Kaiser_Wilhelm_III
-		}
-		x = 7
-		y = -1
-		
 				completion_reward = {
 			add_timed_idea = { idea = GER_Repair_Nation days = 730 }
 		}
-		
-		relative_position_id = GER_MILITARY
-		
 
 	}
-	focus = {
-		id = GER_NEW_INDUSTRIE
-		text = Repair_Industry
-		icon = GFX_goal_generic_construction
-		cost = 10,00
-		prerequisite = {
-			focus = GER_REBUILD_NATION
-		}
-		x = 14
-		y = 6
-
-	}
-	focus = {
-		id = GER_MILITARY
-		text = The_Wehrmacht
-		icon = GFX_focus_generic_military_mission
-		cost = 10,00
-		prerequisite = {
-			focus = GER_REBUILD_NATION
-		}
-		
-				completion_reward = {
-			army_experience = 25
-		x = 7
-		y = 6
-
-	}
-	focus = {
-		id = Military_Economy
-		icon = GFX_goal_generic_construct_mil_factory
-		cost = 10,00
-		prerequisite = {
-			focus = GER_NEW_INDUSTRIE
-		}
-		mutually_exclusive = {
-			focus = Civil_Economy
-		}
-		x = 12
-		y = 8
-
-	}
-	focus = {
-		id = Civil_Economy
-		icon = GFX_goal_generic_construct_civ_factory
-		cost = 10,00
-		prerequisite = {
-			focus = GER_NEW_INDUSTRIE
-		}
-		mutually_exclusive = {
-			focus = Military_Economy
-		}
-		x = 16
-		y = 8
-
-	}
-	focus = {
-		id = GER_ROAD
-		text = German_Roads
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10,00
-		prerequisite = {
-			focus = Military_Economy
-			focus = Civil_Economy
-		}
-		x = 14
-		y = 9
-
-	}
-	focus = {
-		id = GER_STEEL_PRODUCTION
-		text = Steel_Production
-		icon = GFX_focus_generic_steel
-		cost = 10,00
-		prerequisite = {
-			focus = GER_ROAD
-		}
-		x = 16
-		y = 10
-
-	}
-	focus = {
-		id = GER_OIL
-		text = Oil_in_Germany
-		icon = GFX_goal_generic_oil_refinery
-		cost = 10,00
-		prerequisite = {
-			focus = GER_ROAD
-		}
-		x = 12
-		y = 10
-
-	}
-	focus = {
-		id = GER_PROMOTE_INDUSTRY
-		text = Promote_Industry
-		icon = GFX_goal_generic_production
-		cost = 10,00
-		prerequisite = {
-			focus = GER_STEEL_PRODUCTION
-			focus = GER_OIL
-		}
-		x = 14
-		y = 11
-
-	}
-	focus = {
-		id = Ger_Afrika
-		text = Afrika
-		icon = GFX_focus_SAF_german_coup
-		cost = 10,00
-		prerequisite = {
-			focus = GER_REBUILD_NATION
-		}
-		x = 21
-		y = 6
-
-	}
-	focus = {
-		id = GER_AFRIKA_GOVERMENT
-		text = Afrika_Goverment
-		icon = GFX_focus_generic_home_defense
-		cost = 10,00
-		prerequisite = {
-			focus = Ger_Afrika
-		}
-		x = 21
-		y = 8
-
-	}
-}
