@@ -1,12 +1,12 @@
 state={
 	id=767
-	name="STATE_767"
+	name="STATE_767" #North Schleswig
 	state_category = town
 	provinces={
-		332 11251 
+		332 11251
 	}
 		history = {
-			owner = GER	
+			owner = GER
 			buildings = {
 				infrastructure = 5
 
